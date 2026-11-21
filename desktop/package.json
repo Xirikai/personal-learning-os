@@ -1,0 +1,10 @@
+{
+  "name": "personal-learning-os-desktop",
+  "productName": "Personal Learning OS",
+  "version": "0.3.1",
+  "description": "Personal learning calendar, tasks, notes and focus",
+  "author": "Personal Learning OS",
+  "main": "main.cjs",
+  "dependencies": {},
+  "license": "MIT"
+}

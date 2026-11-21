@@ -1,0 +1,49 @@
+{
+  "appId": "com.personallearningos.desktop",
+  "productName": "Personal Learning OS",
+  "directories": {
+    "app": "desktop",
+    "output": "release"
+  },
+  "files": [
+    "main.cjs",
+    "package.json",
+    "!**/node_modules/**"
+  ],
+  "compression": "store",
+  "extraResources": [
+    {
+      "from": "out",
+      "to": "out",
+      "filter": [
+        "**/*"
+      ]
+    },
+    {
+      "from": "licenses",
+      "to": "licenses"
+    },
+    {
+      "from": "LICENSE",
+      "to": "licenses/PROJECT-LICENSE.txt"
+    },
+    {
+      "from": "THIRD-PARTY.md",
+      "to": "licenses/THIRD-PARTY.md"
+    }
+  ],
+  "win": {
+    "target": [
+      {
+        "target": "portable",
+        "arch": [
+          "x64"
+        ]
+      }
+    ],
+    "signExecutable": false
+  },
+  "portable": {
+    "artifactName": "Personal-Learning-OS-Windows-v0.3.1.exe"
+  }
+}

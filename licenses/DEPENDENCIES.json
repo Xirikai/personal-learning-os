@@ -1,0 +1,226 @@
+[
+  {
+    "name": "@capacitor/android",
+    "version": "8.6.2",
+    "license": "MIT",
+    "repository": "git+https://github.com/ionic-team/capacitor.git",
+    "notices": 1
+  },
+  {
+    "name": "@capacitor/app",
+    "version": "8.1.2",
+    "license": "MIT",
+    "repository": "git+https://github.com/ionic-team/capacitor-plugins.git",
+    "notices": 1
+  },
+  {
+    "name": "@capacitor/core",
+    "version": "8.6.2",
+    "license": "MIT",
+    "repository": "git+https://github.com/ionic-team/capacitor.git",
+    "notices": 1
+  },
+  {
+    "name": "@capacitor/filesystem",
+    "version": "8.1.5",
+    "license": "MIT",
+    "repository": "https://github.com/ionic-team/capacitor-filesystem.git",
+    "notices": 1
+  },
+  {
+    "name": "@capacitor/share",
+    "version": "8.0.3",
+    "license": "MIT",
+    "repository": "git+https://github.com/ionic-team/capacitor-plugins.git",
+    "notices": 1
+  },
+  {
+    "name": "@capacitor/synapse",
+    "version": "1.0.4",
+    "license": "ISC",
+    "repository": "",
+    "notices": 1
+  },
+  {
+    "name": "@img/colour",
+    "version": "1.1.0",
+    "license": "MIT",
+    "repository": "git+https://github.com/lovell/colour.git",
+    "notices": 1
+  },
+  {
+    "name": "@img/sharp-win32-x64",
+    "version": "0.35.5",
+    "license": "Apache-2.0 AND LGPL-3.0-or-later",
+    "repository": "git+https://github.com/lovell/sharp.git",
+    "notices": 1
+  },
+  {
+    "name": "@next/env",
+    "version": "15.5.29",
+    "license": "MIT",
+    "repository": "https://github.com/vercel/next.js",
+    "notices": 0
+  },
+  {
+    "name": "@next/swc-win32-x64-msvc",
+    "version": "15.5.29",
+    "license": "MIT",
+    "repository": "https://github.com/vercel/next.js",
+    "notices": 0
+  },
+  {
+    "name": "@supabase/auth-js",
+    "version": "2.119.0",
+    "license": "MIT",
+    "repository": "https://github.com/supabase/supabase-js.git",
+    "notices": 1
+  },
+  {
+    "name": "@supabase/functions-js",
+    "version": "2.119.0",
+    "license": "MIT",
+    "repository": "https://github.com/supabase/supabase-js.git",
+    "notices": 1
+  },
+  {
+    "name": "@supabase/phoenix",
+    "version": "0.4.5",
+    "license": "MIT",
+    "repository": "git://github.com/supabase/phoenix.git",
+    "notices": 1
+  },
+  {
+    "name": "@supabase/postgrest-js",
+    "version": "2.119.0",
+    "license": "MIT",
+    "repository": "https://github.com/supabase/supabase-js.git",
+    "notices": 1
+  },
+  {
+    "name": "@supabase/realtime-js",
+    "version": "2.119.0",
+    "license": "MIT",
+    "repository": "https://github.com/supabase/supabase-js.git",
+    "notices": 1
+  },
+  {
+    "name": "@supabase/storage-js",
+    "version": "2.119.0",
+    "license": "MIT",
+    "repository": "https://github.com/supabase/supabase-js.git",
+    "notices": 1
+  },
+  {
+    "name": "@supabase/supabase-js",
+    "version": "2.119.0",
+    "license": "MIT",
+    "repository": "https://github.com/supabase/supabase-js.git",
+    "notices": 1
+  },
+  {
+    "name": "@swc/helpers",
+    "version": "0.5.15",
+    "license": "Apache-2.0",
+    "repository": "git+https://github.com/swc-project/swc.git",
+    "notices": 1
+  },
+  {
+    "name": "caniuse-lite",
+    "version": "1.0.30001819",
+    "license": "CC-BY-4.0",
+    "repository": "browserslist/caniuse-lite",
+    "notices": 1
+  },
+  {
+    "name": "client-only",
+    "version": "0.0.1",
+    "license": "MIT",
+    "repository": "https://reactjs.org/",
+    "notices": 0
+  },
+  {
+    "name": "iceberg-js",
+    "version": "0.8.1",
+    "license": "MIT",
+    "repository": "https://github.com/supabase/iceberg-js",
+    "notices": 1
+  },
+  {
+    "name": "nanoid",
+    "version": "3.3.20",
+    "license": "MIT",
+    "repository": "ai/nanoid",
+    "notices": 1
+  },
+  {
+    "name": "next",
+    "version": "15.5.29",
+    "license": "MIT",
+    "repository": "vercel/next.js",
+    "notices": 1
+  },
+  {
+    "name": "picocolors",
+    "version": "1.1.1",
+    "license": "ISC",
+    "repository": "alexeyraspopov/picocolors",
+    "notices": 1
+  },
+  {
+    "name": "postcss",
+    "version": "8.5.23",
+    "license": "MIT",
+    "repository": "postcss/postcss",
+    "notices": 1
+  },
+  {
+    "name": "react",
+    "version": "19.3.1",
+    "license": "MIT",
+    "repository": "https://github.com/react/react.git",
+    "notices": 1
+  },
+  {
+    "name": "react-dom",
+    "version": "19.3.1",
+    "license": "MIT",
+    "repository": "https://github.com/react/react.git",
+    "notices": 1
+  },
+  {
+    "name": "scheduler",
+    "version": "0.28.0",
+    "license": "MIT",
+    "repository": "https://github.com/react/react.git",
+    "notices": 1
+  },
+  {
+    "name": "sharp",
+    "version": "0.35.5",
+    "license": "Apache-2.0",
+    "repository": "git+https://github.com/lovell/sharp.git",
+    "notices": 1
+  },
+  {
+    "name": "source-map-js",
+    "version": "1.2.2",
+    "license": "BSD-3-Clause",
+    "repository": "7rulnik/source-map-js",
+    "notices": 1
+  },
+  {
+    "name": "styled-jsx",
+    "version": "5.1.6",
+    "license": "MIT",
+    "repository": "vercel/styled-jsx",
+    "notices": 1
+  },
+  {
+    "name": "tslib",
+    "version": "2.8.1",
+    "license": "0BSD",
+    "repository": "https://github.com/Microsoft/tslib.git",
+    "notices": 1
+  }
+]

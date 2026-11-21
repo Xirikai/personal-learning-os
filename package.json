@@ -1,0 +1,50 @@
+{
+  "name": "personal-learning-os",
+  "version": "0.3.1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "node scripts/test.mjs",
+    "preview": "node scripts/preview.mjs",
+    "desktop:dev": "electron desktop",
+    "desktop:build": "npm run build && electron-builder --config electron-builder.json --win portable",
+    "android:sync": "node scripts/prepare-legal.mjs && npm run build && cap sync android",
+    "android:open": "cap open android",
+    "android:build": "node scripts/android-build.mjs",
+    "setup": "node scripts/setup-runtime.mjs",
+    "test:database": "node tests/schema.test.mjs"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.6.2",
+    "@capacitor/app": "8.1.2",
+    "@capacitor/core": "8.6.2",
+    "@capacitor/filesystem": "8.1.5",
+    "@capacitor/share": "8.0.3",
+    "@supabase/supabase-js": "2.119.0",
+    "next": "15.5.29",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.6.2",
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "electron": "45.4.1",
+    "electron-builder": "26.18.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.0.0",
+    "@electric-sql/pglite": "0.5.17"
+  },
+  "license": "MIT",
+  "overrides": {
+    "postcss": "8.5.23"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
