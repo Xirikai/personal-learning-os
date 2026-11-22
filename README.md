@@ -1,87 +1,95 @@
 # Personal Learning OS
 
-Личная система для учёбы: задачи, календарь, планирование, привычки, заметки и фокус.
+**English** | [Русский](README.ru.md)
 
-Личный проект в развитии, созданный с помощью ИИ. Первая публикация предлагается как **предварительный релиз**, без обещания работы на всех устройствах.
+A personal study workspace for tasks, calendars, planning, habits, notes, and focus sessions.
 
-![Интерфейс](docs/images/smart-planner-desktop.jpg)
+A personal project under active development, built with substantial AI assistance. The first publication is planned as a **prerelease**; compatibility with every device is not guaranteed.
 
-## Скачать приложение
+![Personal Learning OS interface](docs/images/smart-planner-desktop.jpg)
 
-Откройте [Releases](https://github.com/Xirikai/personal-learning-os/releases) и скачайте **Personal-Learning-OS-Windows-v0.3.1.zip**. Распакуйте ZIP и запустите EXE внутри; Node.js пользователю не нужен.
+## Download
 
-Для Android в том же релизе есть отдельный ZIP с тестовым APK. Распакуйте его на телефоне и откройте APK. Требуется Android 7 или новее.
+Open [Releases](https://github.com/Xirikai/personal-learning-os/releases) and download **Personal-Learning-OS-Windows-v0.3.1.zip**. Extract the ZIP and run the EXE inside. End users do not need Node.js.
 
-GitHub-файлы **Source code** — исходники для разработки, готовое приложение находится в ZIP с названием платформы. Ссылки начнут работать после первой публикации репозитория и релиза.
+The same release includes a separate ZIP containing a test Android APK. Extract it on your phone and open the APK. Android 7 or newer is required.
 
-## Возможности
+GitHub's **Source code** downloads contain the development sources. The ready-to-run applications are in the platform ZIPs. Download links will become available after the repository and its first release are published.
 
-- Задачи, месячный/недельный/дневной календарь, события и повторения.
-- Перепланирование дня на устройстве с учётом доступного времени и перерывов.
-- Pomodoro, журнал занятий, привычки и недельные цели.
-- Заметки, учебные карточки для повторения, MathLab и Knowledge Map.
-- Локальная статистика и резервные копии JSON.
-- Опциональная синхронизация через собственный проект Supabase.
-- Общая веб-основа для Windows и Android.
+## Features
 
-## Запуск из исходников
+- Tasks, month/week/day calendars, events, and recurrence.
+- On-device day replanning based on available time and breaks.
+- Pomodoro, a study journal, habits, and weekly goals.
+- Notes, review flashcards, MathLab, and Knowledge Map.
+- Local statistics and JSON backups.
+- Optional synchronization through your own Supabase project.
+- A shared web foundation for Windows and Android.
 
-Нужен Node.js 22+.
+## Run from source
+
+Requirements: Node.js 22+.
 
 ```powershell
 npm ci
 npm run dev
 ```
 
-Веб-версия: http://localhost:3000. Для отдельного окна Windows: сначала `npm run build`, затем `npm run setup` и `npm run desktop:dev`.
+The web version runs at http://localhost:3000. For a separate Windows application window, first run `npm run build`, then `npm run setup` and `npm run desktop:dev`.
 
-Если npm не выполнил установочный скрипт Electron автоматически, команда `npm run setup` загрузит официальный runtime.
+If npm did not run Electron's installation script automatically, `npm run setup` downloads the official runtime.
 
-## Сборка Windows
+## Build for Windows
 
 ```powershell
 npm run setup
 npm run desktop:build
 ```
 
-Результат появляется в `release/`. 
+The output is saved to `release/`.
 
 ## Android
 
-Нужны JDK 21, Android SDK 36 и переменные JAVA_HOME, ANDROID_HOME. После `npm ci`:
+Requirements: JDK 21, Android SDK 36, and the `JAVA_HOME` and `ANDROID_HOME` environment variables. After `npm ci`, run:
 
 ```powershell
 npm run android:sync
 ./android/gradlew.bat -p android --no-daemon assembleDebug
 ```
 
-APK: `android/app/build/outputs/apk/debug/app-debug.apk`. Это debug-подпись для тестирования. Ключ подписи нельзя помещать в Git. Для обновления Android-приложения нужны прежний ключ и тот же applicationId; перед удалением приложения экспортируйте данные.
+APK output: `android/app/build/outputs/apk/debug/app-debug.apk`. This uses a debug signature for testing. Never commit signing keys to Git. Updating an Android application requires the same signing key and `applicationId`; export your data before uninstalling an existing version.
 
-## Проверки
+## Checks
 
 ```powershell
 npm test
 npm run typecheck
+npm run test:database
 ```
 
-57 автоматических проверок, TypeScript и статическая сборка прошли. Отдельно в локальном PostgreSQL проверены свежая схема Supabase, права двух пользователей и защита от устаревших записей. Живой облачный проект не изменялся.
+All 57 automated checks, TypeScript checking, and the static build passed. A separate local PostgreSQL check covered the fresh Supabase schema, access controls for two users, and stale-write protection. The live cloud project was not changed.
 
-В репозитории предусмотрены автоматические проверки GitHub Actions. Они начнут выполняться после публикации. Локальная проверка не означает успешный запуск ещё не выполненного CI.
+GitHub Actions checks are configured to run after publication. Successful local checks do not imply that the not-yet-run GitHub workflows have passed.
 
-## Данные и ограничения
+## Data and limitations
 
-Публичные EXE/APK работают локально и не подключены к облаку автора. Для автоматической синхронизации нужна собственная настройка Supabase и пересборка обеих платформ. JSON можно переносить без облака. Android APK — тестовая debug-сборка, не публикация в Google Play. EXE без сертификата подписи; автоматических обновлений нет.
+- Public EXE/APK builds work locally and are not connected to the author's cloud project.
+- Automatic synchronization requires your own Supabase configuration and rebuilding both platforms. JSON backups can be transferred without cloud services.
+- The Android APK is a test debug build, not a Google Play release.
+- The EXE is not code-signed. Automatic updates are not implemented.
 
-Данные сохраняются в localStorage. Экспортируйте JSON через настройки; облако описано в [CLOUD-SETUP.md](docs/CLOUD-SETUP.md). Публичная сборка не содержит адреса и ключа личного Supabase-проекта автора.
+Data is stored in `localStorage`. Export JSON backups through the application settings. Cloud setup is described in [CLOUD-SETUP.md, in Russian](docs/CLOUD-SETUP.md). Public builds do not contain the URL or key of the author's personal Supabase project.
 
-## Как создавался проект
+## Development process
 
-Автор выбирал функции, проверял сценарии использования, находил неудобства и уточнял требования. ИИ подготовил значительную часть кода, документации и технических решений. Это первый практический опыт создания приложения; самостоятельное знание всех используемых технологий не заявляется.
+The author selected features, tested workflows, identified usability issues, and refined requirements. AI produced a substantial part of the code, documentation, and technical decisions. This is a learning project; independent expertise in every technology used is not claimed.
 
-## Обратная связь
+## Feedback
 
-В Issues опишите действия, ожидаемый и фактический результат, версию приложения и Windows/Android. Не прикладывайте личные резервные копии, пароли или ключи.
+When opening an Issue, include the steps to reproduce, expected and actual behavior, the application version, and your Windows or Android version. Do not attach personal backups, passwords, or keys.
 
-## Лицензии
+## Licenses
 
-Новый код проекта — [MIT](LICENSE). У сторонних компонентов собственные лицензии: [THIRD-PARTY.md](THIRD-PARTY.md), тексты в `licenses/`. Версии зависимостей закреплены в `package-lock.json`.
+Original project code is licensed under [MIT](LICENSE). Third-party components retain their own licenses: see [THIRD-PARTY.md, in Russian](THIRD-PARTY.md) and the notices in `licenses/`. Dependency versions are recorded in `package-lock.json`.
+
+Supporting build and user guides are currently in Russian.
